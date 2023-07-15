@@ -14,3 +14,11 @@ This project leverages the power of AWS, Jenkins, SonarQube, and Docker to deliv
 - With Docker, we can easily package and distribute our application, ensuring that it can run consistently across different environments.
 
 Together, these tools provide a powerful platform for developing and delivering high-quality software. By using AWS, we can easily scale our infrastructure to meet the demands of our users. Jenkins allows us to automate our processes, reducing the risk of human error and increasing efficiency. SonarQube helps us maintain high standards of code quality, ensuring that our application is reliable and maintainable. And Docker allows us to easily distribute our application, reducing the time and effort required to deploy it to different environments.
+
+# Limitations for AWS Free Tier
+
+SonarQube demands high use of memory, since SonarQube bring ElasticSearch you might have trouble using the AWS free tier servers, such as, t2.micro
+
+To avoid using more than 1gb or memory, go to sonar.propreties and change the max heap size to 256 or less if needed.
+
+SonarQube will take a couple minutes to start.
